@@ -2,8 +2,8 @@ const guid = process.env.NETLIFY_GOOGLE_ANALYTICS_ID;
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Serif Theme',
-    description: 'my theme'
+    title: 'Shake Stack LLC',
+    description: 'Rapid application development',
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -14,39 +14,37 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/content`,
-        name: 'content'
-      }
+        name: 'content',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages'
-      }
+        name: 'pages',
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/data`,
-        name: 'data'
-      }
+        name: 'data',
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: guid || 'UA-XXX-1',
         // Puts tracking script in the head instead of the body
-        head: false
-      }
+        head: false,
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          'Playfair+Display:400,700'
-        ],
-        display: 'swap'
-      }
-    }
-  ]
+        fonts: ['Playfair+Display:400,700'],
+        display: 'swap',
+      },
+    },
+  ],
 };
